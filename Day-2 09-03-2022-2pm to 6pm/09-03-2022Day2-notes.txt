@@ -1,0 +1,570 @@
+methods 
+=======
+a method is a collection of stmts,which performs spefic tasks amd returns results to the valler
+it allow you to write reusable code and divide the ptogram into several small units.
+example
+=====
+pub---------
+{
+//stms;
+meth0d();--------------method()
+//stmts;		{ //stmts; return ;}						
+method1();------------method1(){===//stmts  return }
+}
+return stmt
+=========
+it is a control stmt which termints the excution ..
+
+example for methods  
+===============
+packahe com.simplelearn.methods;
+public class Methoddemo
+{
+public static void main(String[] args)
+{
+ MethodDemo demo=new MethoDemo();
+//method deceleration
+demo.showmsg();//as many time we want call this function is called reuseable 
+ 
+demo.displayauthor("Kushala");
+
+demo.ageCal(1990);
+demo.retirementcal("marry",2000);
+
+
+}
+//method deceleration
+public void showmsg()
+{
+System.out.println("welcome to java methods ");
+}
+============
+//types of methods 
+//user defined method
+//1.parameterized and
+//one paramertized -->maximun 5 parameters to use in methods is good for use in java
+public void displayauthor(String author)
+{
+System.out.println("the authir is"+author);
+}
+
+
+
+//one parameter
+public int ageCal(int yearofbirth)
+{
+int age=2022  - yearofbirth;
+System.out.println("the user age is "+age);
+return age;
+}
+
+
+//two parameters
+public void  retirementcal(String username,int yearofbirth)
+{
+int age= ageCal(yearofbirth);
+if(age>=60)
+{
+System.out.println("Hi"+username+"you are alredy retired");
+}
+else
+{
+System.out.println("hi"+username +"you have"+(60-age)+"yera for retirement");
+
+}
+
+}
+
+==========bank exampe=====
+pacakge com.silpleleran.methods.bak;
+public clas Bank
+	{
+
+	public String bankname="Iron Bank";
+	//show balnce
+		public double showbalance(Account account)
+		{
+		if(account!=null)
+			{
+			return account.bal;
+			}
+		return 0;
+		}
+
+
+
+//deposit amount
+
+public double depositamt(Account account,double bal)
+{
+	if(amount>0)
+	{
+	account.bal +=amount;
+	return  account.bal;
+	}
+	else
+	{
+	System.out.println(""invalid depisy");
+return 0;
+	}
+}
+
+
+
+
+//withdraw amount
+public double withdraw(Acoount account,double amount)
+	{
+	if(amount>0}
+	{
+	account.bal -=amount;
+return account.bal;
+
+	}
+	else
+	{
+	System.out.println(""invalid depisy");
+return 0;
+	}
+}
+
+
+//anthoer file 
+//anthoer class is Account 
+pacakage com.simplearn.methoid.bank;
+public class Account
+{
+public long accNo;
+public double bal;
+public String username;
+public String email;
+
+
+//non parametrized construtor
+public Account(){
+}
+//paramterize construtor  initiatlazation the values
+public Account(long accNo, double bal,string username,String email)
+{
+this.accNo=accNo;//this refers the current orking prioperties inside object it is eyword
+this.bal=bal;
+this.username=username;
+this.email=email;
+
+}
+}
+
+//anothrer file class
+public class Test{
+
+public sttaic void main(Strings[] args)
+{
+//account object
+Account account=new Account(13442,244444435.56,"Iron Bank","kushhs@gmail.com");
+
+//bank operation
+Bank opr=new Bank();
+System.out.println("Welcome to the bank "+opr.bankname+"");
+
+//show bal
+System.out.println("balnce"+opr.showbal(account));
+
+//deposit
+System.ouy.println("deposit"+opr.depsoitamut(account,1000.00));
+
+//with draw
+System.out.println("with draw"+opr.withdraw(account,100));
+
+
+}
+}
+
+exercise
+//shop operation 
+buy
+===
+itemname
+cost
+
+sell
+====
+
+
+showproduct 
+=======
+shop shopn,string item
+
+shop class
+=======
+shopname;
+items;
+cost;
+exdate;
+
+============
+package com.simplelearn.method
+public class Cal()
+{
+public sttaic void main(String[] args)
+{
+calop opr=new calop();
+Scanner sc=new Scanner(System.in);
+s.op("enter avalue");
+s.o.p("enter x value");
+int x=opr.nextInt();
+
+s.o.p("enter y value");
+int y=opr.nextInt();
+
+float res1=opr.add(x,y);
+s.o.p("add"+res1);
+
+short re2=opr.sub(x,y);
+s.o.p("sub"+res2);
+
+float res3=opr.mul(x,y);
+s.o.p("mul"+res3);
+
+float res4=opr.div(x,y);
+s.o.p("div"+res14);
+
+double res5=opr.avg(x,y);
+s.o.p("avg"+res5);
+
+s.o.p(opr.calname);
+
+}
+}
+
+
+class calop()
+{
+public static caname="baseCal";
+
+
+
+//addition
+public float add(int num1,int num2){
+return num1+num2;
+}
+
+//substration
+public short sub(int num1,int num2){
+return (short) num1-num2;
+}
+
+//mul
+public float mul(int num1,int num2){
+return num1*num2;
+
+}
+
+//div
+public float div(int num1,int num2){
+return num1/num2;
+
+}
+
+//avg
+public double div(int num1,int num2){
+return (num1+num2)/2;
+}
+}
+
+//2. non-parameterized
+===============
+//predefined method 
+/constructor 
+constructor is sam eas class same and specail method 
+used to initialize an object when it is craedted
+it has the same name as the class but no explicit return type
+blueprint for the code -->mupltipke object printing ---very possible class to help the printing the clases of the object 
+//types
+//1.parameterized construtor
+//2.non-parterized constructor 
+===================================
+
+==>static ----keyword and one time memory is allocationand mailny used in memory mgnt (global declaration)
+vaarible,method,class ---before 
+when the static properti is thier there is no object craetion when printing the values 
+means sttaic metho,var,class does not want the object creation .
+==> this --current working object and it is keyword.used in constructor or message and method also 
+
+
+===inner class====
+class which is declared inside another class.
+to achicve the security mechanism;
+nothing but non sttaic class and static classes 
+example
+package com.simplellearn.inner class
+
+public class Outerclass{
+//data varaibles
+private double amount=3335.2;
+public String msg="Today is a good day";
+
+//inner class  static 
+static class InnercTest
+{
+private String data="Hello  & welcome";
+public void showdata()
+{
+s.o.p("outer class data"+amount);
+s.o.p(msg);
+}
+}
+public static void main(String[] args)
+{
+//outer class object there is no  outer class object for sttaic class200 ok
+
+
+//crea inner class from  outer class object
+InnerTest inner=new InnerTest();
+inner.showdata();
+
+}
+
+
+}
+
+
+example2
+==============
+public class Outerclass{
+//data varaibles
+private double amount=3335.2;
+public String msg="Today is a good day";
+
+//inner class non static 
+class InnercTest
+{
+private String data="Hello  & welcome";
+public void showdata()
+{
+s.o.p("outer class data"+amount);
+s.o.p(msg);
+}
+}
+public static void main(String[] args)
+{
+//outer class object
+OuterTest outer=new OuterTest();
+
+
+//crea inner class from  outer class object
+InnerTest inner=new InnerTest();
+inner.showdata();
+
+}
+
+
+}
+====
+
+============Strings=========
+
+
+the sequence of charters.
+it cannot be channged
+it is non primitive type 
+
+example======\
+package  com.simpllearn.Stringhandling;
+public class StringDemo{
+public static void main(Strings[] args)
+{
+//each time you create a string the JVM checks the string pool
+//
+String str1="Jhon";
+String str2="Jhon";
+String str3="Jhon"; 
+
+
+if(str1 == str2 && str2==str3)
+{
+s.o.p("same strings");
+}
+esle
+{
+s.o.p("different strings ");
+}
+
+//string new keyword
+//each time new keyword is going to generate new string refernce
+String st1=new String
+String st2=new String("Kushi");
+String st3=new String("Kushi");
+
+f(st1 == st2 && st2==st3)
+{
+s.o.p("same strings");
+}
+esle
+{
+s.o.p("different strings ");
+}
+
+
+
+}
+}
+
+=======
+String is  immutable
+
+public class Immutabledemo{
+public static void mian(Strings[] args)
+{
+//in java string objects are immutable
+//immutable simply means unmodified values
+
+String user="kush";
+
+
+//concat()-->upadte the string 
+String res=user.concat("laddu");
+
+
+s.o.p(user);
+s.o.p(res);
+
+
+}
+}
+String Buffer --->thread safe 
+String Builder--->not thread safe 
+
+example for String Buffer
+----------------------
+packa
+pblic class StringBufferDemo
+{
+public static void main(String[] args)
+{
+StringBuffer msg=new StringBuffer("Today is my day");
+s.o.p(msg);
+
+
+//string modification
+msg.append("Happy Learning!");
+s.o.p(msg);
+
+//replae text
+msg.replace(0,1,"k");
+s.o.p(msg);
+
+
+//delete text
+msg.delete(0,2);
+s.o.p(msg);
+
+
+//inser text
+,msg.insert(0,"Welcome");
+s.o.p(msg);
+}
+}
+
+=====String Bulider example==
+
+public class StringBuilderDemo{
+public static void main(String[] args)
+{
+//string builder is allow to create a mutable string
+// not thread safe
+
+StringBuilder text=new StringBuilder("The Day is Great ");
+s.o.p("text");
+
+//append data
+text.append("keep learning ");
+s.o.p(text);
+
+//replacedata
+text.replace(0,10,"wonderfull");
+s.o.p(text);
+
+//delete data
+text.delete(5,6);
+s.o.p(text);
+
+//insert data
+text.insert(0,"Welcome ");
+s.o.p(text);
+
+}
+}
+
+===============exercise========
+exercise
+//shop operation 
+buy
+===
+itemname
+cost
+
+sell
+====
+
+
+showproduct 
+=======
+shop shopn,string item
+
+shop class
+=======
+shopname;
+items;
+cost;
+exdate;
+
+------------
+prctice 3 
+class bank
+{
+	class finace
+	{
+		//stsmts
+	}
+ 	class locker
+	{
+		//stmts
+	}
+ 	class insurance
+	{
+		//stsmts
+	}
+	class banking
+	{
+		stsmts
+	}
+	public static void main(string args[])
+	{
+	}	
+}
+
+
+
+
+
+===============hithub=======
+
+
+''''https://github.com/wahidKhan74/phase1-java-fundamentals-08-08-2022'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

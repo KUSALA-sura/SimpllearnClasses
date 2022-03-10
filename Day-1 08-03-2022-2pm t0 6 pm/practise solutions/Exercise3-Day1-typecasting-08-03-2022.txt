@@ -1,0 +1,28 @@
+package com.simplearn.typecasting;
+import java.util.*;
+public class Exercise3
+{
+public static void main(String[] args) {
+System.out.println("String to numeric conversion using Wrapper class");
+System.out.println("enter the String num value ");
+Scanner input=new Scanner(System.in);
+String num=input.nextLine();
+byte Bval=Byte.parseByte(num);
+short Sval=Short.parseShort(num);
+int  Ival=Integer.parseInt(num);
+long Lval=Long.parseLong(num);
+float Fval=Float.parseFloat(num);
+double Dval=Double.parseDouble(num);
+
+System.out.println("Conversion values");
+System.out.println("Byte Vlaue"+Bval);
+System.out.println("Short Vlaue"+Sval);
+System.out.println("Integer Vlaue"+Ival);
+System.out.println("Long Vlaue"+Lval);
+System.out.println("Float Vlaue"+Fval);
+System.out.println("Double Vlaue"+Dval);
+	}
+}
+
+
+
