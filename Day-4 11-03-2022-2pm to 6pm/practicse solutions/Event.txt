@@ -1,0 +1,30 @@
+//package com.simplilearn.collection.queue.Event;
+
+import java.util.ArrayDeque;
+import java.util.Queue;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Queue<Event> eventQueue = new ArrayDeque<Event>();
+		
+		// insert data into queue 
+		eventQueue.add( new Event(10001, "Mike Smith","12-03-20022","13-03-2022","Small Event"));
+		eventQueue.add( new Event(10002, "Marry Smith", "14-03-20022","19-03-2022","Freser Event"));
+		eventQueue.add( new Event(10003, "William Smith", "12-03-20022","13-03-2022","Annul Event"));
+		eventQueue.add( new Event(10004, "Sara Smith", "12-03-20022","13-03-2022","Home Event"));
+		eventQueue.add( new Event(10005, "Aria Smith", "12-03-20022","13-03-2022","Nmae Event"));
+		
+		for(Event acc: eventQueue) {
+			System.out.println(acc.id);
+			System.out.println(acc.name);
+			System.out.println(acc.srt);
+			System.out.println(acc.end);
+			System.out.println(acc.evntype);
+			System.out.println("---------------");
+		}
+
+	}
+
+}

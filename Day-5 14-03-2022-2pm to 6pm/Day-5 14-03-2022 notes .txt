@@ -1,0 +1,325 @@
+========Day-5======
+Multithreading ,exception hanlding and oops 
+=================================
+multithreading is a multitasking thread we have to work on the multi threads at a atime in progrmas 
+conccurency==>excut ethe multi items at a item 
+the both concurrency an dultithrading are both are used in multi tasking items in the programs .
+
+example
+=====
+computer
+paint    chrome   ide  xyz are opening ata tme 
+
+is called process the os with cpu works in process 
+overivew of running multi taking  the java platform 
+
+in multi tasking is nothing called multi threading ....multi processing 
+in concreate the or parelle it runs the multipule tasks are called the multi tasking 
+
+Thread is a small process and light weidht process 
+
+the   extendsing from Thread class
+and implemest from  Runnable 
+
+concurrency is the ability to run multiplu progrmas in parellel.it enales a program to achive hig performance and throgh by utilitizing capapbilities of the underlying the process 
+
+
+class Main extends Thread{
+public static void main(String[] args)
+{
+public void run()
+{
+System.out.println("Heloo Kushi Welocme to screen ");
+}
+Main  m=new Main();
+m.start();
+}
+}
+
+
++++++Implements in Runnable 
+
+import java.util.*;
+public class CompanyThread
+{
+public static void main(String[] args)
+{
+
+//create object  of Bob 
+
+Bob r1=new Bob();
+Thread th=new Thread(r1);
+th.start();
+
+Kushi r2=new Kushi();
+Thread th1=new Thread(r2);
+th1.start();
+
+Laddu r3=new Laddu();
+Thread th2=new Thread(r3);
+th2.start();
+
+}
+}
+
+
+
+
+
+
+class Bob implements Runnable
+{
+@Override
+public void run()
+{
+System.out.println("Bob is running");
+}
+}
+
+
+
+class Kushi  implements Runnable
+{
+@Override
+public void run()
+{
+System.out.println("Kushi is running");
+}
+}
+
+
+class Laddu implements Runnable
+{
+@Override
+public void run()
+{
+System.out.println("Laddu is running");
+}
+}
+
+========hreadDemoWith   with lamda expression =====
+import java.util.*;
+//ThreadDemoWith   with lamda expression 
+
+public class ThreadDemowithLamdaClass{
+
+public static void main(String[] args)
+{
+//create object
+Thread t1=new Thread(()->{
+System.out.println("Threa one Lamda 1");
+});
+t1.start();
+
+
+Thread t2=new Thread(()->{
+System.out.println("Thread two Lamda 2 @ ");
+});
+t2.start();
+
+
+}
+}
+
+====ThreadDemoWithAnonymosClass===
+import java.util.*;
+
+public class ThreadDemoWithAnonymosClass{
+public static void main(String[] args)
+{
+
+//create object
+
+Thread t1=new Thread(new Runnable(){
+@Override 
+public void run()
+{
+System.out.println("Thread is Nothing Thraed @ 1 ");
+}
+
+
+});
+
+t1.start();
+
+
+Thread t2=new Thread(new Runnable()
+{
+@Override
+public void run()
+{
+System.out.println("This is Kushi Thraed @ 2");
+}
+
+});
+
+t2.start();
+}
+
+}
+
+========Thread safe++++++
+thread safety is aprocess that makes the program safe to used ina a multithreaded  eniviroment
+
+====ways to implemst tread safety are ;isted below 
+use of synchronization
+
+use of ayomic wrapper classes from java.uril.concurrent.atomic package
+
+use of loacks from java.util.concurrent package
+
+use of thread safe collection classes
+
+use of a volatile keyword with variables 
+
+=========synchronization
+import java.util.*;
+
+//thraed safe in multuithread 
+
+class Counter{
+
+int count;
+
+//increase count ==thread sfae  
+public void increaseCount()
+{
+count++;//count =count+1; or count+=1;
+}
+//decrease count   it is non-thread safe 
+public void decreaseCount()
+{
+count--;//count =count-1; or count-=1;
+}
+
+}
+
+public class  ThreadsafeDemo
+{
+public static void main(String[] args) throws InterruptedException
+{
+//create object 
+Counter counter=new Counter();
+
+
+//craete thread one 
+
+Thread t1=new Thread(()->{
+for (int i=0;i<1000;i++)
+{
+counter.increaseCount();
+}
+
+});
+
+//craete thread one 
+
+Thread t2=new Thread(()->{
+for (int i=0;i<1000;i++)
+{
+counter.increaseCount();
+}
+
+});
+
+//craete thread one 
+
+Thread t3=new Thread(()->{
+for (int i=0;i<1000;i++)
+{
+counter.increaseCount();
+}
+
+});
+t1.start();
+t2.start();
+t3.start();
+
+
+t1.join();
+t2.join();
+t3.join();
+
+System.out.println("The count ::"+counter.count);
+
+}
+}
+
+
+
+===Thread Life Cycle ===
+new()
+Runnable
+run()//active
+block  Thread 
+terminated 
+
+	|=======	waiting /
+notify()      |	sleeping/
+notifyAll()	|	blocking
+resume()	|  	  |==>wait(),sleep(),suspend()
+new  -->runnable --running -->terminted (dead state)
+	          ==> yield()
+	          <===
+
+
+
+new thread
+||
+||
+Runnable===wait ,sleep,block 
+||
+||
+Ruunning===terminted
+||wait,sleep,block
+
+==============Exception handling++++++++++
+
+asynchronous excptions 
+
+deal with hardware and exteranal problems 
+
+==>mouse failure 
+
+==>keyboard,motherboard failure 
+==>memory problems
+===>power fialure 
+
+
+synchronous exception
+deal with promarmming run time erors 
+
+checked ==Interruptedexcption
+ClassNotfound excpetion
+.....
+
+unchecked ==urntime error + runtime excpetion is called 
+
+eg:Arithmentic Excption 
+
+
+exception in java claeed unwanted errors.
+
+
+try 
+{
+//logic
+}
+
+eg:
+try 
+{
+int sum=0;
+for(int i=0;i<args.length;i++)
+{
+sum+=Integer.parseInt()
+
+}
+}
+
+
+
+
+
+
+

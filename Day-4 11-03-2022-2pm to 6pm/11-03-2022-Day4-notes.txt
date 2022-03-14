@@ -1,0 +1,694 @@
+Day--4
+======
+repaced the yeasterday session
+========================
+collections
+Arrays
+
+shortcut foreclipise
+===========
+Ctrl + space -> auto suggestions
+Ctrl+/-->coomit
+f8 -->rrun the program 
+======Employee List===
+package com.simlearn.List.employee
+public class EmployeeList 
+public static void main(Strings[] args)
+{
+
+//create employee object
+Employee emp1=new Employee(1001,"Jhon","Eng",234.3332);
+Employee emp2=new Employee(1002,"KushJhon","Mechnaincal",234.3332);
+Employee emp3=new Employee(1003,"LadduJhon","HR",234.3332);
+Employee emp4=new Employee(1004,"JExtrahon","Super Quality",234.3332);
+
+//implemts - Arraylist
+List<Employee> emp=new ArrayList<Employee>();
+
+//add the elemnts
+emp.add(emp1);
+emp.add(emp2);
+emp.add(emp3);
+
+//add in posion
+emp.add(0,emp4);
+
+//replace 
+emp.set(3,emp2);
+
+//iteration
+for(Employee emplist:emp)
+{
+System.out.println("Employee"+emplist);
+System.out.println(emplist.id);
+System.out.println(emplist.name);
+System.out.println(emplist.dept);
+System.out.println(emplist.sal);
+}
+}
+}
+
+
+==another clas====
+
+public class Employee
+{
+public int id;
+public String name;
+public String dept;
+public duoble sal;
+public Employee()
+{
+}
+public Employee(int id,String name,String dept,double sal);
+{
+this.id=id;
+this.name=name;
+this.dept=dept;
+this.sal=sal;
+}
+//without oeverride we are getting the refernece value .beacuse using toString 
+
+@override
+public String toString()
+{
+return "id= "+this.id+"name " +name+"dept "+dept+"sal "+sal;
+}
+
+}
+===Excercise1===
+AccountList 
+wap to generate a linked list of accounttype ;
+===Exercise2===
+wap to vector based list for shop  ;
+
+-------------
+======Set============
+
+set refers a collection that cannot store the duplicate elemnts
+used to model the mathametical set abstarction
+set has implementation in various 
+types
+---------
+HashSet==>
+TreeSet==>
+Linked List==>
+===Exampele Set Type of HashSet===
+pacakage com.simplearn.Set
+public class SetDemo
+{
+public sttaic void main(string[] args)
+{
+
+//set is Child interface in collection
+//set do not have duplicate values
+//implemenatation class:Hashset,TreeSet,LinkedSet
+
+
+//delecration
+Set<String> set1=new HashSet<String>();//unique elments ,no insertion order
+Set<String> set2=new LinkedHashSet<String>();//unique elemnts with insertion order
+Set<String> set3=new TreeSet<String>();//unique elemts with no insertion  oder and order by asccending /descending order elements .
+
+
+Set<String> setofcmp=new HashSet<String>();
+
+//inserting elemnstns
+setofcmp.add("DELL");
+setofcmp.add("wipro");
+setofcmp.add("google");
+setofcmp.add("wipro");
+setofcmp.add("wipro");
+setofcmp.add("Simpllearn");
+setofcmp.add("Microsoft");
+
+//printing
+System.out.println(setofcmp);
+
+//iteratons 
+//Iterator ,enhenace for loop,for each
+//set itaertion with Iterator
+
+Iterator<String>  itr=setofcmp.iterator();
+System.out.println("The Iterator elemnsts");
+while(itr.hashNext())
+{
+Syste.out.println(itr.next);
+}
+
+///for loop
+for(String cmp:setofcmp)
+{
+System.out.println("for loop of enhence comapnys");
+System.out.println(cmp);
+}
+
+///for eachh
+for each(String cmp1:setofcmp)
+{
+System.out.println("for  each loop of enhence comapnys");
+System.out.println(cmp1);
+}
+
+}
+}
+
+===LinkedHashset===
+
+public class LinkedHashSet{
+public static (void main Strin[] args)
+{
+//Linked list
+Set<String>  brands=new LinkedHashSet<String>();
+
+//inserting elemnstns
+brands.add("Nike");
+brands.add("Nike");
+brands.add("Fila");
+brands.add("Adidas");
+brands.add(puma");
+System.out.prinltn(brands);
+
+
+
+//Iterator 
+Iterator<String>  itr=brands.iterator();
+System.out.println("The Iterator elemnsts");
+while(itr.hashNext())
+{
+Syste.out.println(itr.next);
+}
+
+///for loop
+for(String brd:brands)
+{
+System.out.println("for loop of enhence Brands");
+System.out.println(brd);
+}
+
+///for eachh
+for each(String brd1:brands)
+{
+System.out.println("for  each loop of enhence  Brands");
+System.out.println(brd1);
+}
+
+}
+}
+
+
+====TreeSet====
+
+public class TreeSetDemo
+{
+public static void main(String[] args)
+{
+TreeSet<String>  nbrands=new TreeSet<String>();
+
+//inserting elemnstns
+nbrands.add("Nike");
+nbrands.add("kushii");
+nbrands.add("Fila");
+nbrands.add("Adidas");
+nbrands.add(puma");
+nbfrands.add("Laddu");
+nbrands.add("kushii");
+
+
+System.out.prinltn(nbrands);
+System.out.prinltn(nbrands.descendingSet());
+//printing values in asescending order like alphanumeric format 
+
+
+
+//Iterator 
+Iterator<String>  itr=nbrands.iterator();
+System.out.println("The Iterator elemnsts");
+while(itr.hashNext())
+{
+Syste.out.println(itr.next);
+}
+
+///for loop
+for(String brd:nbrands)
+{
+System.out.println("for loop of enhence number of Brands");
+System.out.println(brd);
+}
+
+///for eachh
+for each(String brd1:nbrands)
+{
+System.out.println("for  each loop of enhence  number of  Brands");
+System.out.println(brd1);
+}
+
+//Iterator  descending order--in reverse order
+Iterator<String>  itr2=nbrands.descendingIterator();
+System.out.println("The Iterator elemnsts");
+while(itr2.hashNext())
+{
+Syste.out.println(itr2.next);
+}
+
+///for loop reverse the lements in set
+for(String brd:nbrands.descendingSet())
+{
+System.out.println("for loop of enhence number of Brands");
+System.out.println(brd);
+}
+}
+}
+==Set Employee==
+
+piblic class Employee 
+{
+copy the avboue velues 
+}
+
+public class EmployeeSet{
+public static vid main(String[] args)
+{
+Employee emp1=new Employeee(1,kushi","jhh",677.09);
+Employee emp2=new Employeee(11,kushi","jhh",677.09);
+Employee emp3=new Employeee(111,kushi","jhh",677.09);
+Employee emp4=new Employeee(1111,kushi","jhh",677.09);
+
+//create a set
+Set<Employee> empset=new LinkedHashSet<Employee>();
+
+empset.add(emp1);
+empset.add(emp2);
+empset.add(emp4);
+empset.add(emp3);
+empset.add(emp1);
+
+System.out.println(empset);
+
+//Iterator 
+Iterator<Employee>  itr=empset.iterator();
+System.out.println("The Iterator elemnsts of employee");
+while(itr.hashNext())
+{
+Employee employee=itr.next;
+System.out.println(employee.id);
+System.out.println(employee.name);
+System.out.println(employee.dept);
+System.out.println(employee.sal);
+}
+
+///for loop
+for(Employee emp:empset)
+{
+System.out.println("for loop of enhence number of employees");
+System.out.println(emp);
+}
+
+}
+}
+
+==Excercise3==
+FoodItemSet
+wap to create se of food items 
+id,name,price,desc==fileds 
+
+
+
+======Queue coleection====
+queue is follows FIFO
+rear end ---inserting dataa
+front-- removing data
+
+prority queue==> allows to initinize a queue 
+Queue  B=new PriorityQueue();
+
+anthoer way to initialize queue 
+ Queue A=new LinkedList();
+-------------
+package com.simplearn.Queuee;
+public class QueueDemo
+{
+public static void main(String[] args)
+{
+//queue is datata structures its works FIFO
+
+Queue<String> pq=new ArrayDeque<String>();
+pq.add("Kushi");
+pq.add("KushiLaddu");
+pq.add("KushiBestie");
+pq.add("KushiMeera");
+pq.add("KushiNagul");
+pq.add("Kushi");
+
+System.out.println(pq);
+
+//priniting head elements checking top element
+System.out.println("The haed elemnsts"+pq.peek());
+
+//first elemt
+System.out.println("The haed elemnsts"+pq.element());
+
+
+//remove data elemnts poll() --head 
+System.out.println("The removed elemnsts"+pq.poll());
+System.out.println("The remaining elemnsts"+pq);
+
+//print the removed elemnt
+
+String rem=pq.poll();
+System.out.println("The removed elemnsts"+rem);
+
+//iteration over by for 
+for(String person:pq)
+{
+System.out.println("------------");
+System.out.println(person);
+}
+System.out.println("------------");
+//priority
+Queue<String>  peopleQ=new  PriorityQueue<String>();
+
+peopleQ.add("Kushi");
+peopleQ.add("KushiLaddu");
+peopleQ.add("KushiBestie");
+peopleQ.add("KushiMeera");
+peopleQ.add("KushiNagul");
+peopleQ.add("Kushi");
+
+System.out.println(peopleQ);
+
+//priniting head elements checking top element
+System.out.println("The haed elemnsts"+peopleQ.peek());
+
+//first elemt
+System.out.println("The haed elemnsts"+peopleQ.element());
+
+
+//remove data elemnts poll() --head 
+System.out.println("The removed elemnsts"+peopleQ.poll());
+System.out.println("The remaining elemnsts"+peopleQ);
+
+//print the removed elemnt
+
+String rem=peopleQ.poll();
+System.out.println("The removed elemnsts"+rem);
+
+
+//iteration over by for 
+for(String person:peopleQ)
+{
+System.out.println("------------");
+System.out.println(person);
+}
+System.out.println("------------");
+
+Queue<String> peopleQ=new ArrayDeque<String>();
+
+}
+}
+===========priority Queue ==
+publicclass PriorityQueueDemo
+{
+pblic sttaic void main(String[] args){
+
+PriorityQueue<Integer> numbers=new PriorityQueue<Integer>();
+
+numbers.add(4);
+numbers.add(3);
+numbers.add(7);
+numbers.add(1);
+numbers.add(90);
+
+numbers.offer(11);
+System.out.println(numbers);
+
+
+
+
+}
+}
+
+
+===Account  Quueue===
+
+
+public class Account{
+
+public long= accno;
+public String=name;
+public double=bal;
+public String email=email;
+
+Account()
+{
+}
+
+Account(long accno,String name,double bal,String email)
+{
+this.accno=accno;
+this.name=name;
+this.bal=bal;
+this.email=email;
+}
+
+@override
+public String toString()
+{
+return accno+name+bal+email;
+}
+
+}
+
+==another main cklass==
+
+public class AccountQueue=
+{
+public static void main(String args)
+{
+
+//Queue<Account> acc=new ArrayDeque<Account>();
+
+//acc.add(11,"Kushi",222.44,"kjsjd0");
+
+System.out.println(acc);
+
+for(Account acc1:acc)
+{
+System.out.println(acc1.id);
+}
+
+}
+}
+====Event queue Exercise====
+
+wap for creating Event queueing 
+==>event ---(id,name,srtdate,enddate,eventtype)
+
+
+========================
+========Map==============
+
+the map interface maps unique keys to values 
+
+it conatins a key that is an object used to retrive a value 
+
+a map object only stroes key-value pais 
+
+map
+======
+hashMap
+hashtable
+sortedmap
+=====
+treeset
+
+========example============
+pacakage com.simplleeran.collection.map;
+public class Mapdemo{
+public static void main(String[]  args)
+{
+//map is java collection stroes data is  key(unique) and values pair
+
+Map<String,String>  map1=new HashMap<>();
+Map<String,String>  map2=new LinkedHashMap<>();//strore key value +no insertion order
+Map<String,String>  map3=new HashMap<>();//stroe key value pair + insertion order
+Map<String,String>  map1=new TreeMap<>();//store key value pair +order by key-->asc and desc order
+
+
+Map<String,Long>  phn=new HashMap<String, Long>();
+
+
+///add elemnt in map put()
+
+phn.put("Kushi",9866993592);
+phn.put("Laddu",7702089732);
+phn.put("Kutty",9505519132);
+phn.put("meera",7659870432);
+phn.put("Kushi",9866993592);
+
+System.out.println(phn)
+System.out.println(phn.get("Kushi"));
+System.out.println(phn.get(7702089732));
+
+
+///iterator over a map
+for(Map.Entry<String, Long> entry :pn.entryset())
+{
+System.out.println("Key"+entry.getKey());
+System.out.println("Vlaue"+entry.getValue())
+}
+
+
+//remove the element in map
+System.out.println("-----------");
+
+}
+
+}
+
+=============LinkedHashMap=====
+pacakage com.simplleeran.collection.map;
+public class LinkedHashMapdemo{
+public static void main(String[]  args)
+{
+Map<String,double>  itm=new LinkedHashMap<String, Double>();
+
+
+///add elemnt in map put()
+
+itm.put("Kushi",98.00);
+itm.put("Laddu",77.0);
+itm.put("Kutty",9.2);
+itm.put("meera",76.00);
+itm.put("Kushi",98669935.92);
+
+System.out.println(itm)
+
+
+System.out.println(itm.get("Kushi"));
+System.out.println(itm.get(77.0));
+
+
+///iterator over a map
+for(Map.Entry<String, Double> entry :itm.entrySet())
+{
+System.out.println("Key"+entry.getKey());
+System.out.println("Vlaue"+entry.getValue())
+}
+System.out.println("-------");
+}
+}
+========TreeMap======
+pacakage com.simplleeran.collection.map;
+public class TreeMapdemo{
+public static void main(String[]  args)
+{
+Map<String,Integer>  itm=new LinkedHashMap<String, Integer>();
+
+
+///add elemnt in map put()
+
+itm.put("Kushi",98);
+itm.put("Laddu",77);
+itm.put("Kutty",9);
+itm.put("meera",76);
+itm.put("Kushi",98);
+
+System.out.println(itm)
+
+
+System.out.println(itm.get("Kushi"));
+System.out.println(itm.get(77.0));
+
+
+///iterator over a map
+for(Map.Entry<String, Integer> entry :itm.entrySet())
+{
+System.out.println("Key"+entry.getKey());
+System.out.println("Vlaue"+entry.getValue())
+}
+System.out.println("-------");
+}
+}
+
+
+
+====Account Map========
+
+public class Accountmap{
+public sttaic void main(String[] args)
+{
+
+Map<Integer,Account>  map=new  LinkedHashMap<Integer,Account>();
+
+map.put(1,new Account(11," Kushi",8778.98));
+map.put(2,new Account(12," KushiLaddu",8778.980));
+map.put(3,new Account(13," KushiMeera",8778.98));
+map.put(1,new Account(2,new Account(12," Kushi",8778.98));
+
+System.out.println(map);
+
+System.out.println(map.get(1));
+
+//iterator over by Linked hashmap
+///iterator over a map
+for(Map.Entry< Integer,Account> entry :map.entrySet())
+{
+System.out.println("Key"+entry.getKey());
+System.out.println("Vlaue"+entry.getValue())
+}
+System.out.println("-------");
+}
+
+
+}
+}
+
+public class Account{
+
+public long= accno;
+public String=name;
+public double=bal;
+public String email=email;
+
+Account()
+{
+}
+
+public Account(long accno,String name,double bal,String email)
+{
+this.accno=accno;
+this.name=name;
+this.bal=bal;
+this.email=email;
+}
+
+@override
+public String toString()
+{
+return accno+name+bal+email;
+}
+
+}
+}
+
+=======Student map Exercise======
+wap  to create a studney map -->
+
+name key , value object
+
+
+
+======git hub=====
+https://github.com/wahidKhan74/phase1-java-fundamentals-08-08-2022
+
+
+
+
+
+
+
+
+
+
+
