@@ -1,0 +1,77 @@
+Day-7
+=========
+
+overview of the Oops
+
+1.classes
+2.objects
+3.ineritance
+4.abstraction
+5.interfaces 
+
+Arrays and Lists 
+==============
+Array is group of data elements under acommom  datatype .
+
+Data Structures 
+==============
+
+two typws of datat structres are 
+static data structures
+---------
+Arrays
+
+dynamic data structures 
+-------------------------
+List
+-----
+LinkedList
+DoubleSingleLinkedList
+Circual LinkedList
+double Circual Liked List  
+
+Colloction of diferent items we have orginxze the data i number itms .
+
+
+
+maven
+----------
+maven is provides for automation depencies for the apachi remote repositry for thw users .
+
+download the remote file to local file is by maven 
+
+
+maven package for the creation of maven project 
+
+=====double linked list practice======
+++git hub ---------
+https://github.com/wahidKhan74/phase1-datastructure-03-16-2022
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
