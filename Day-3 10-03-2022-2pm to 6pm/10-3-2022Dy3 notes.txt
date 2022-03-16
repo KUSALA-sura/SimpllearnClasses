@@ -1,0 +1,505 @@
+=========Git pushing files steps====
+Using SSH Key
+git status
+ls -lrt
+git log --oneline
+ssh-keygen
+Copy the public key and paste 
+Go to github and login
+settings -> SSH key -> create new key ->paste the key
+create new repositary
+======Arrays===========
+
+
+an array is group of sam elemenets under  acommon dataty type.it is an element refers to index 0.
+you can craete one dimensional as well ss multi dimensional.
+ 1-dem array                            		2-demi array
+int a =new int[5];			int s[] []=new int[3][3];
+
+its gives n-1 values.
+Array demo examle
+============
+package com.simplleran.Array Method
+
+
+import java.util.*;
+public class ArrayDemo
+{
+public static void main(String[] args)
+{
+//array decleration
+int  [] numbers ={10,20,30,40,50,60};
+int collznum[]={10,20,30,40,50};
+System.out.println("numbers");
+System.out.println(Arrays.toString(numbers));
+System.out.println(Arrays.toString(collznum));
+
+// access elements by index in array 
+System.out.println("element at index 0"+numbers[0]);
+
+System.out.println("element at index 3"+numbers[3]);
+
+System.out.println("element at index 5"+numbers[5]);
+
+System.out.println("element at index last index "+numbers[numbers.length-1]);
+
+
+//access elemesnts with ietration 
+
+for(int index=0;index<=numbers.length-1;index++)
+{
+System.out.println("elemnts at index are "+numbers[index]);
+}
+
+}
+}
+
+
+
+
+=======EmailArray===
+package com.simpleran.array;
+public class EmailArray
+{
+public static void main (Strin[] args)
+{
+//create empty array size as 5
+String[] emails=new String[5];
+
+//insert data into array
+emails[0]="kushi@gmail.com";
+emails[1]="kushiBestie@gmail.com";
+emails[2]="kushiLaddu@gmail.com";
+
+//acess data from array 
+s.o.p("The 0 index email is "+emails[1]);
+s.o.p("The 2 index email is "+emails[2]);
+
+//exception
+s.o.p("The 0 index email is "+emails[5]);//ArrayIndexOutOfBound excepion
+
+//access elements with iteration
+for(int index=0;index<=emails.length-1;index++)
+{
+s.o.p("elemnts at index are "+emails[index]);
+}
+}
+}
+===empoyee xample=
+public clas Emp
+{
+public int id;
+public String name;
+public String dept;
+public double sal;
+
+public Emp()
+{
+}
+
+public Emp(int id,String name,String dept,double sal)
+{
+this.id=id;
+this.name=name;
+this.dept=dept;
+this.sal=sal;
+}
+
+}
+
+//anthoer class****
+public class EmpArray
+{
+public sttaic void main(string[] args)
+{
+
+//create object employee array
+int [] num=new int[4];//
+
+Emp [] emplist=new Emp[5];
+//employee inerst data shortb cut way easy way 
+emplist[1]=new Emp(100,"kush","eng",767677.99);
+emplist[2]=new Emp(101,"kush@@","eng",767677.99);
+emplist[3]=new Emp(102,"kushLady","eng",767677.99);
+
+s.o.p(Arrays.toString(emplist));
+
+//insert data into employee array
+Emp emp1=new Emp(100,"kush","eng",767677.99);
+emplist[0]=new emp1;
+}
+}
+
+==========end======
+exercise1
+wap create collection  price array ==float[]
+access data by index iterate over a all values 
+
+excercise 2
+wap create colletion ipaddress arrray=String[] id =={"192.168.11.13"}
+//access data by index and iterate  over all values 
+
+
+excercise 3
+Account Arrayclass
+wap create accountarray ==String[]  accounts.
+Acoount[] accounts=new Account[4];
+//aceess data index and iterate over all values 
+===============exercise ===
+====multidemin array example========
+import java.util.*;
+public class MutiArray
+{
+public static  void main(String[] args)
+{
+//mutli dimensional array declartion
+int[][] numbers={{2,4,6,8,10}, { 3,5,7,9,11,13}};
+
+//printiing values 
+System.out.println(Arrays.toString(numbers[0]));
+System.out.println(Arrays.toString(numbers[1]));
+
+//iteration for mutli dimension array 
+
+for(int row=0;row<numbers.length;row++)
+{
+	System.out.println(Arrays.toString(numbers[row]));
+	for(int col=0;col<numbers.length;col++)
+	{
+	System.out.println(Arrays.toString(numbers[col]));
+	System.out.println("["+row+" ' "+col+"] : "+numbers[row][col]);
+
+	}
+
+}
+
+}
+}
+=======Colletion in java======
+
+collection framwork provides an architechures to store and manipulate a group of objects 
+=====collection===
+interfaces  			classes 	         		alogorithms
+//interfaces allow clloctions	concrete implemtation   	sorting,seraching,computtaions
+to be manipulates of the	collcton interfaces
+detailes reretation
+
+iterable
+collection==super interface for all sub clsses 
+==>>list//list is ordered data collection
+list preserve insertion order
+(index->access data)
+List allows duplicates values
+==
+ArrayList
+Vector
+Linkedlist
+
+==>queue==/Queue allaows FIFO
+insert adta in fear
+delete data in rare
+==
+PriorityQueue
+
+===set==//set may or may not preserve orderand stroe unqiue data elemnsts
+
+HashSet 
+LinkedhasSet
+SortedSet
+===
+Treeset
+
+======examples for collection =====
+-------List example-----
+package com.simplearn.Colletion;
+public class  ListDemo {
+public static void main(String[] args)
+{
+//List order colletion of thhe dat with duplicate valuues
+//List(interfaces)->imp class-ArrayList,linked,vector,stack
+
+
+//list deleration
+List<String> list1=new ArrayList<String>();
+//backed by dynamic array,not thread safe,read operations
+List<String> list2=new LinkedList<String>();//backed dynamic linked list ,not thread safe,insert,delete,replace operations
+List<String> list3=new Vector<String>();//Thread safe collection
+List<String> list4=new Stack<String>();//thread safe collection
+
+
+
+List<String>  userlist=new ArrayList<>();
+
+//insert the user data here 
+userlist.add("Kush");
+userlist.add("Kush1");
+userlist.add("Kush2");
+userlist.add("Kush3");
+userlist.add("Kush4");
+
+System.out.println("The user List elemensts are"+userlist);
+
+System.out.println("The user List of 1 index  are"+userlist.get(2));
+System.out.println("The user List of 2 index  are"+userlist.get(4));
+
+//inserting at specific posion 
+userlist.add(2,"Laddu");
+System.out.println("The user List added   2 index  are"+userlist.grt(2));
+
+//delete at or removing 
+userlist.remove(2);
+System.out.println("The removed elment"+userlist);
+
+//iteration over Array List
+Iteration<String> itr =userlist.iterator();
+while(itr.hasNext())
+{
+System.out.println(itr.next());
+}
+
+//for loop with countor 
+
+for(int index=0;index<userlist.size();index++)
+{
+System.out.println(userlist.get(index));
+}
+
+//enhance for loop 
+for(String name :userlist)
+{
+System.out.println("the name "+name);
+}
+
+
+}
+}
+==========ArrayListdemo example======
+import java.util.*;
+import java.uti.ArrayyList;
+import java.util.Array;
+public class ArrayListDemo{
+public static void main(String[] args){
+
+List<String> list=new ArrayList<String>();
+
+list.add("wipro");
+list.add("TCS");
+list.ad("google");
+list.add("mphasis");
+list.add("simplelearn");
+
+System.out.println(list)
+System.out.println(list.get(3));
+
+//inserting at specific posion 
+list.add(2,"Laddu");
+System.out.println("The user List added   2 index  are"+list.get(2));
+
+//delete at or removing 
+list.remove(2);
+System.out.println("The removed elment"+list);
+
+//iteration over Array List
+Iteration<String> itr =list.iterator();
+while(itr.hasNext())
+{
+System.out.println(itr.next());
+}
+
+//for loop with countor 
+
+for(int index=0;index<list.size();index++)
+{
+System.out.println(userlist.get(index));
+}
+
+//enhance for loop 
+for(String name :list)
+{
+System.out.println("the name "+name);
+}
+}
+}
+
+===<Linked list ====
+
+import java.uti.ArrayyList;
+import java.util.Array;
+public class ArrayListDemo{
+public static void main(String[] args){
+
+List<String> list=new LinkedList<String>();
+
+list.add("wipro");
+list.add("TCS");
+list.ad("google");
+list.add("mphasis");
+list.add("simplelearn");
+
+System.out.println(list)
+System.out.println(list.get(3));
+
+//inserting at specific posion 
+list.add(2,"Laddu");
+System.out.println("The user List added   2 index  are"+list.get(2));
+
+//delete at or removing 
+list.remove(2);
+System.out.println("The removed elment"+list);
+
+//iteration over Array List
+Iteration<String> itr =list.iterator();
+while(itr.hasNext())
+{
+System.out.println(itr.next());
+}
+
+//for loop with countor 
+
+for(int index=0;index<list.size();index++)
+{
+System.out.println(userlist.get(index));
+}
+
+//enhance for loop 
+for(String name :list)
+{
+System.out.println("the name "+name);
+}
+}
+}
+
+
+====Vector List=======
+
+
+import java.uti.ArrayyList;
+import java.util.Array;
+public class StackDemo{
+public static void main(String[] args){
+
+List<String> list=new Vector<String>();
+List<Integer> listQuan=new Vector<String>();
+
+list.add("wipro");
+list.add("TCS");
+list.ad("google");
+list.add("mphasis");
+list.add("simplelearn");
+
+System.out.println(list)
+System.out.println(list.get(3));
+
+//inserting at specific posion 
+list.add(2,"Laddu");
+System.out.println("The user List added   2 index  are"+list.get(2));
+
+//delete at or removing 
+list.remove(2);
+System.out.println("The removed elment"+list);
+
+//iteration over Array List
+Iteration<String> itr =list.iterator();
+while(itr.hasNext())
+{
+System.out.println(itr.next());
+}
+
+//for loop with countor 
+
+for(int index=0;index<list.size();index++)
+{
+System.out.println(userlist.get(index));
+}
+
+//enhance for loop 
+for(String name :list)
+{
+System.out.println("the name "+name);
+}
+}
+}
+
+============Stack List========
+import java.uti.ArrayyList;
+import java.util.Array;
+public class ArrayListDemo{
+public static void main(String[] args){
+
+List<String> list=new  Stack<String>();
+
+list.add("wipro");
+list.add("TCS");
+list.ad("google");
+list.add("mphasis");
+list.add("simplelearn");
+
+System.out.println(list)
+System.out.println(list.get(3));
+
+//inserting at specific posion 
+list.add(2,"Laddu");
+System.out.println("The user List added   2 index  are"+list.get(2));
+
+//delete at or removing 
+list.remove(2);
+System.out.println("The removed elment"+list);
+
+//iteration over Array List
+Iteration<String> itr =list.iterator();
+while(itr.hasNext())
+{
+System.out.println(itr.next());
+}
+
+//for loop with countor 
+
+for(int index=0;index<list.size();index++)
+{
+System.out.println(userlist.get(index));
+}
+
+//enhance for loop 
+for(String name :list)
+{
+System.out.println("the name "+name);
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

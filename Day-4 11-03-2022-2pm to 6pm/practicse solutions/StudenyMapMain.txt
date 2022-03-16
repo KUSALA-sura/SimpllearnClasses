@@ -1,0 +1,31 @@
+//package com.simplilearn.collection.map.account;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+
+		Map<String,Student> stuMap = new LinkedHashMap<String, Student>();
+
+		stuMap .put("MITS", new Student(10001, "tony stark", "cse",80.0));
+		stuMap .put("MITS", new Student(10002, "aria stark", "mech",89.80));
+		stuMap .put("MITS", new Student(10003, "marry stark","EEE" ,52.54));
+		stuMap .put("MITS", new Student(10004, "john smith", "csit",57.54));
+		stuMap .put("MITS", new Student(10005, "will ssmithtark", "ece",98.56));
+
+		System.out.println(stuMap);
+
+		System.out.println("10001 Studnet :> " + stuMap.get(10001));
+		System.out.println("10003 Student :> " + stuMap.get(10003));
+		System.out.println("--------------");
+		// iterate over map
+		for (Map.Entry<String, Student> entry : stuMap.entrySet()) {
+			System.out.println(" Key : " + entry.getKey());
+			System.out.println(" Value : " + entry.getValue());
+			System.out.println("--------------");
+		}
+	}
+
+}

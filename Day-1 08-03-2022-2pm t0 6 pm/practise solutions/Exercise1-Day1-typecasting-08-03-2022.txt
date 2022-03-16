@@ -1,0 +1,95 @@
+package com.simpllearn.typecasting
+public class Exercise1
+{
+public static void main(String[] args) {
+
+byte bV=23;
+short sV=bV;
+int iV=bV;
+long lV=bV;
+float fV=bV;
+double dV=bV;
+System.out.println("Byte Convertions");
+System.out.println("Byte Value"+bV);
+System.out.println("Short Value"+sV);
+System.out.println("Int Value"+iV);
+System.out.println("Long Value"+lV);
+System.out.println("Float Value"+fV);
+System.out.println("Double Value"+dV);
+
+
+short SV=344;
+int IV=SV;
+long LV=SV;
+float FV=SV;
+double DV=SV;
+byte    BV=(byte)SV;
+System.out.println("Short Value Convertions ");
+System.out.println("Interger Value "+IV);
+System.out.println("Long Value "+LV);
+System.out.println("Float Value "+FV);
+System.out.println("double Value "+DV);
+System.out.println("Byte Value of explicit type casting"+BV);
+
+
+int intV=123;
+long longV=intV;
+float floatV=intV;
+double doubleV=intV;
+short  shortV=(short)intV;
+byte byteV=(byte)intV;
+System.out.println("Interger Value Convertions ");
+System.out.println("Interger Value "+intV);
+System.out.println("Long Value "+longV);
+System.out.println("Float Value "+floatV);
+System.out.println("double Value "+doubleV);
+System.out.println("Short Value of explicit type casting"+shortV);
+System.out.println("Byte Value of explicit type casting"+byteV);
+
+
+
+long LongV=23445;
+float FloatV=LongV;
+double DoubleV=LongV;
+int    IntV=(int)LongV;
+short  ShortV=(short)LongV;
+byte  ByteV=(byte)LongV;
+System.out.println("Long Value Convertions ");
+System.out.println("Long Value "+LongV);
+System.out.println("Float Value "+FloatV);
+System.out.println("double Value "+DoubleV);
+System.out.println("IntegerValue of explicit type casting"+IntV);
+System.out.println("Short Value of explicit type casting"+ShortV);
+System.out.println("Byte Value of explicit type casting"+ByteV);
+
+
+float Fval=87.0;
+double Dval=(double)Fval;
+long  Lval=(long)Fval;
+int  Ival=(int)Fval;
+short Sval=(short)Fval;
+byte Bval=(byte)Fval;
+System.out.println("Float Value Convertions ");
+System.out.println("Float Value of implict type casting "+Fval);
+System.out.println("double Value "+Dval);
+System.out.println("Long Value of explicit type casting"+Lval);
+System.out.println("Integer Value of explicit type casting"+Ival);
+System.out.println("Short Value of explicit type casting"+Sval);
+System.out.println("Byte Value of explicit type casting"+Bval);
+
+
+double Dvalue=9880989.090;
+byte Bvalue=(byte)Dvalue;
+short Svalue=(byte)Dvalue;
+int Ivalue=(int)Dvalue;
+long Lvalue=(long)Dvalue;
+float Fvalue=(float)Dvalue;
+System.out.println("Double Value Convertions ");
+System.out.println("double Value "+Dvalue);
+System.out.println("Byte Value of explicit type casting"+Bvalue);
+System.out.println("Short Value of explicit type casting"+Svalue);
+System.out.println("Integer Value of explicit type casting"+Ivalue);
+System.out.println("Long Value of explicit type casting"+Lvalue);
+System.out.println("Float Value of explicit type casting"+Fvalue);
+	}
+}

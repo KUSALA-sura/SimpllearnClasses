@@ -1,0 +1,26 @@
+//package com.simplilearn.collection.map.account;
+
+public class Student {
+	
+	public int id;
+	public String name;
+	public double per;
+	public String dept;
+	
+	public Student(int id, String name, String dept,double per) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.dept=dept;
+		this.per=per;
+	}
+	
+	public Student() {
+		super();
+	}
+	
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", name=" + name + ", deptarment " + dept + " Percentange " +per+  "]";
+	}
+}

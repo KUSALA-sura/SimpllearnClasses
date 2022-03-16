@@ -1,0 +1,131 @@
+type casting 
+------------
+datatpes
+======
+two types 
+primitive 
+======
+byte 1 byte
+short 1  byte
+int   4 bytes
+long  8 bytes  
+float  3.4 8bytes
+double  t/f 1 byte=8bits
+char 1 byte c,d,
+============
+
+
+
+
+
+===============
+
+excercise 1:wap on implicit type casting  in java
+byte--short--int--long--float--double
+short--int--long--float--double
+int--long--float--double
+long--float--double
+float--double
+
+
+exercise2 :wap on excplicit typeacting in java
+
+double--float--long--int--short--byte
+float--
+long--
+
+Exercise3:wap on  non primitive string form primitive byte,short,int,long,float,double
+
+
+non primitive
+========
+arrays
+objects 
+strings
+
+
+=======type catings====
+=====primitive to primitive======
+1.implicit ===>[normal order]  it a convertion data from lower to higher range data types
+2.exciplit ===>[reverse order]  it a conversion data from higher to lower data type tange .
+======non primirive to primitive====or== primitive to non primitive===
+the convertion data from vice versa both dataypes by using """WRAPPER CLASS"""
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		//non primitive ---- primitive using wrapper class 
+		String str="Kushi";//non convertiable 
+		String str3="hg123";//non convertiable
+		System.out.println(str);
+		System.out.println(str3);
+	
+		//convertiable
+		String str2="123";// convertiable
+		int  ival=Integer.parseInt(str2);//Integer.parseInt -->wrapper class for int data type
+		float  fval=Float.parseFloat(str2);//Float type --wrapper class
+		System.out.println("The person contained in String is "+str2);
+		System.out.println("The interger value from string value"+ival);
+		System.out.println("the float value form string value"+fval);
+	}
+}
+
+
+
+=================
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		//non primitive ---- primitive using wrapper class 
+		String str="Kushi";//non convertiable 
+		String str3="hg123";//non convertiable
+		System.out.println(str);
+		System.out.println(str3);
+	
+		//convertiable
+		String str2="123";// convertiable
+		System.out.println("enetr the string value");
+		Scanner input=new Scanner(System.in);
+		String val=input.nextLine();
+		
+		int  ival=Integer.parseInt(val);//Integer.parseInt -->wrapper class for int data type
+		float  fval=Float.parseFloat(val);//Float type --wrapper class
+		System.out.println("The person contained in String is "+str2);
+		System.out.println("the uswr input is"+val);
+		System.out.println("The interger value from user input  string value"+ival);
+		System.out.println("the float value form user input string  string value"+fval);
+	}
+}
+//varibles
+		//datypes
+		//type casting 
+		//class  
+		//object creation
+======================
+exercise 4 
+impilict user input 
+exercise 5 
+excpilit user input 
+excer6 non prtimitive-primtive 
+user string ---primitive typw covert
+
+
+
+
+
+
+
+
+
+

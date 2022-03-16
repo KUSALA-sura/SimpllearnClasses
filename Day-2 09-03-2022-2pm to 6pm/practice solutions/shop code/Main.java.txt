@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    //craete object for Operation
+	    Operation op=new Operation(2000,1,"Kushi","L");
+	    
+	    //Shop craetiob object
+	    Shop sp=new Shop();
+	    
+	    System.out.println("The Shop name is "+sp.shopname);
+	    
+	    //buying 
+	    System.out.println("The Buying cost"+sp.buy(op));
+	    
+	    //selling
+	    System.out.println("The selling shop "+sp.sell(op,200));
+	    
+	    //sjow product 
+	    System.out.println("The Showproduct detailes "+sp.showproduct(op,200));
+	    
+	}
+}

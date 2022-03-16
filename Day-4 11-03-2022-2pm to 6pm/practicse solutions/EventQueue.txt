@@ -1,0 +1,28 @@
+//package com.simplilearn.collection.queue.Event;
+
+public class Event {
+	
+	public int id;
+	public String name;
+	public String srt;
+	public String end;
+	public String evntype;
+	
+	public Event(int id, String name,String srt,String end,String evntype) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.srt=srt;
+		this.end=end;
+		this.evntype=evntype;
+	}
+	
+	public Event() {
+		super();
+	}
+	
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", name=" + name + ", Event Sart date=" + srt + "event end date"+ end + "event type"+evntype +"]";
+	}
+}

@@ -1,0 +1,388 @@
+self learning  in simpleran from wipro:8-3-2022
+--------------------------------------------
+1.agile
+------
+*principles of Agile
+*d/f b/w the waterfall and agile approaches
+*describing scrum and scrum roles
+*fundamentals of git
+*git repository
+*java basics
+*datatypes
+*loops,conditional,jump staments
+*classes and objects
+*core keyords
+today session
++++++++++
+1.demonstrate type casting
+------------------
+datayes
+---------
+---------
+1.primitive datatype
+boolean
+     boolean>T or F 1 bit data stroing
+numeric type
+	char  		integral
+	char>2 bytes	integer       floating
+			byte >1bytefloat(8 bytes)
+			short>8 bytes	double>8bytes
+			int>8 bytes
+			long(8bytes)
+
+
+2.non primitive type
+==>arrays
+==>objects
+==>strings
+==>data structures
+
+
+type casting 
+---------------
+========
+(widening)implicit type casting==byte->short->int->ling->float->double
+(narrowing)explict type casting ===double->float->long->int->short->byte
+
+example program covert primitive to nonprimitive and vice-versa
+implicit type casting
+==============
+""""import java.util.*;
+package com.simplelearn.typeacsting
+public class TypecastingDemo	{
+public static void main(String[] args){
+//implict type cast:when data type are compatible,there automatically type cast
+//widening type cast: coverts data from lower range value to higer range type
+*byte--short--int--long--float--double
+byte smallCount=100;//1byte(8 bit)=>-128 to -127
+short shortCount=smallCount;//widening->2 byte(16 bits) =>-32768 to 32767[here converting byte--short]
+int intCount=smallCount;//widening->byte--int
+long bigCount=intCount;//widening->int--long(8 byte)
+float floatCount=intCount;//widening int--float(8 byte)
+float floatCount2=bigCount;//widening --long--float it ia an exception 
+double decimalCount=bigCount///widening --long--double
+System.out.println("Byte Count:"+samllCount);
+System.out.println("short Count:"+shortCount);
+System.out.println("integer Count:"+intCount);
+System.out.println("long  Count:"+bigCount);
+System.out.println("float Count:"+floatCount);
+System.out.println("double Count:"+doubleCount);
+}
+}
+""""
+output:
+=====
+Byte Count : 100
+shoet Count : 100
+integer count: 100
+Long Count :100
+Float Count:100.0
+double Count : 100.0
+
+explicit type casting
+===============
+package com.simplern.typecasting
+public class ExplicitTypeCastingDemo{
+//when type are not compatible,type conversions deoas not happen automatically
+//narrowing coverting data of incompatible type convert data from higher to lower value 
+double==float==long==int==short==byte
+public sttaic void main(String[] args)
+{
+double price=122.5656;
+long bigprice=(long)price;//narrowing ==double--long
+int intprice=(int)price;//narrowing ==double--int
+short shortprice=(short)bigprice;//narrowing == long--short[range problem and both are the whole values range is different]
+byte byteprice=(byte)price;//narroewing==double--byte
+System.out.println("double price :"+price);
+System.out.println("big price :"+bigprice);
+System.out.println("int price :"+intprice);
+System.out.println("short  price :"+shortprice);
+System.out.println("byte price :"+byteprice);
+
+
+}
+}
+output
+=====
+Double price : 122.5656
+big price :
+int price :
+short price :
+byte price :
+========NumericeDataConvertor=====userinput from keyboard
+package com.simplearn.typecasting
+public class Numericdata
+{
+public static void main(String[] args)
+{
+//step1==collect input number from end user
+Scanner input=next Scanner(System.in);
+System.out.println("Welcome to nermic conertor");
+System.out.println("Enter a interger number value");
+int userinput=input.nextInt();
+
+//step2==convert number into another type
+System.out.println("UserInput :"+userinput);
+//implicit type
+long bigvalue=userinput;
+float floatvalue=userinput;
+double doublevalue=userinput;
+
+
+//explicit type
+byte bytevalue=(byte)userinput;
+short shortVlaue=(short)userinput;
+
+
+System.out.println("Type casted values");
+System.out.println("Byte value"+bytevalue);
+System.out.println("short value"+shortvalue);
+System.out.println("long value"+longvalue);
+System.out.println(" valufloate"+floatvalue);
+System.out.println("double  value"+doublevalue);
+
+
+}
+}
+output
+=====
+enetr a value 124
+type casted values;
+byte value=-36
+short value==1244
+long vaue==1244
+float vaue==1244.0
+double ==1244.0
+
+===string input will to int primitive datatype ===
+pacakge com.simpleran.typecasting;
+import java.util.*;
+public class Stringtonum
+{
+public static void main(String[] args)
+{
+//string to numeric conversion:string value should be  convertable value
+String price="123;//string literal includes double codes=>convertible value
+string amount="a26acn";//string literal =>non convertible string
+//String is non primitive type  -> primitive vlue  it can be done by using Wrapper class ==it hepls to conver the both datypes vise vaersa
+//use Wrapper class for conversion of int==float==double==->>Integer,float,double etc.
+
+int intprice=Integer.parseInt(price);
+float floatprice=Float.parseFloat(price);
+double doubleprice=Double.parseDouble(price);
+
+double doubleprice=Double.parseDouble(amount);//its is exception amount is nonconvertible conversion that is ""NumberFormatException""
+
+
+
+System.out.println("Foat price :"+floatprice);
+System.out.println("int price :"+intrice);
+System.out.println("double price :"+doubleprice);
+
+
+}
+}
+
+excersice1 
+
+//TODO:Wap for data converting frpm int,byte,short->>float,double and long.
+Excerise 2:
+//TODo:
+wap for data converting from double and long ->int short byte and float .
+hint >>collect double and long from user console
+
+Excerise 3
+//wap for data converting from string number -> int,short,byte long,double,and float.
+hint collect data from user console 
+
+2.use access modifers
+===============
+Acess modifers
+
+modifier     class  package  subclass  world
+public	  y       y             y               y	
+protected     y      y             y              n
+no modifer   y      y             n              n
+private         y      n           n               n
+
+exampe for access modifers
+public =it has widest scope and is accesible everywhere
+  old age home 
+  social parks 		anywhere
+private  ==are accessible only within the class
+  bank 
+  gold 			with in the class
+
+protected ==
+ house
+ lands 			class,package->outside package eed inheritance
+
+default
+ penthouse 			class and package
+
+
+example
+======
+wap 
+package com.simplelearn.accessmodifers;
+public class PublicAcessModifers
+{
+public static void main(String[] args)
+{
+// auto-genetrated method stub
+
+Govn govn=new Govn();
+ System.out.println("The public traspot is "+govn.transportion);
+System.out.println("the publi park is"+govn.park);
+System.out.println(govn.showpark());
+System.out.println(govn.showpubassets());
+
+}
+}
+class govn
+{
+//public varible
+
+public double transportion="train";
+public String park="xyz";
+public double assets=45603679987d;
+
+//public method 
+public double showpubassets(){
+return asstes;
+}
+
+public String showpark()
+{
+return park;
+}
+
+//public constructor 
+public Govn()
+{
+
+}
+}
+
+====private access modifer example==
+package com.simpleran.acessmodifers;
+public class PrivateacesModifers
+{
+public static void main(string[] args)
+{
+banacount account=new bankaccount();
+
+account.balance;//compile error 
+account.fdamount;//complie ime error 
+account.shoebalnce();//complie time error 
+
+account.PrintAll();
+}
+class Banacount{
+//private varible:properties dtaa members
+private double balence=2867.98;
+private double fdamount=86788.08;
+
+//private method :members function
+private double showbal()
+{
+return balance;
+}
+private double shoefdamount()
+{
+return amount;
+}
+//public methods
+public viod printall()
+{
+System.out.println("the balence"+balnce+"fdamount +:"+fdamount);
+}
+
+}
+=====default acess modifers===
+package com.simplelearn.accessmodifers
+public class defaultaccessmodifers
+{
+public static boid mian(string[] args)
+
+//
+Brother brother=new Brother();
+System.out.println("Money"+brother.money);
+System.out.println("clothes "+brother.clothes);
+
+brother.showall();
+}
+}
+
+class Brother{
+
+//defalut variable
+double money=25532.564;
+String  clothes="xyz";
+
+//default method 
+void showAll()
+{
+System.out.println("the money ::"+money+"The clorthes ::"+clothes);
+}
+
+}
+
+===proted access modifer====
+package com.simplernlearn.accessmodifers
+public class protedacessmodifers
+{
+public static void main(String[] args)
+{
+//
+Hero hero=new Hero();
+
+System.out.println("hero "+hero.power);
+System.out.println("the hero rank is "+hero.rank);
+
+hero.showpower();
+hero.showrank();
+
+
+}
+}
+
+class Hero
+{
+//proted data
+
+protected int rank=1;
+protected String power="Healing power ::Mydad !";
+
+//protected method 
+protected void showpower()
+{
+System.out.println("the hero power is"+power);
+}
+protected void shpwrank()
+{
+System.out.println("the hero rank  is"+rank);
+}
+}
+
+
+inheritance is working using extends 
+
+
+
+
+
+
+
+
+
+
+
+-->whatsapp group for students FSD Java
+   ""https://chat.whatsapp.com/KhdxFzwC5xN4irUTkITtwh""
+===git hub for sir by simplelearn ========
+""https://github.com/wahidKhan74/phase1-java-fundamentals-08-08-2022""
+
+===recording session===avalible by link using 
+""https://lms.simplilearn.com/nps/session/62205ee4d69ade702623b588""
+

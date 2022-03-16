@@ -1,0 +1,35 @@
+package com.simplelearn.typecasting
+import java.util.*;
+public class Excercise2
+{
+	public static void main(String[] args) {
+	    double Dv=2435.099;
+	    byte   Bv=(byte)Dv;
+	    short  Sv=(short)Dv;
+	    int    Iv=(int)Dv;
+	    long   Lv=(long)Dv;
+	    float  Fv=(float)Dv;
+	    System.out.println("Excplict conversion");
+	    System.out.println("Byte Vlaue"+Bv);
+	    System.out.println("Short Value"+Sv);
+	    System.out.println("Integer Value"+Iv);
+	    System.out.println("Long Value"+Lv);
+	    System.out.println("Flaot Value"+Fv);
+	    
+	   long lonv=76888;
+	   float floatv=lonv;
+	   double doublev=lonv;
+	   byte bytev=(byte)lonv;
+	   short shortv=(short)lonv;
+	   int intv=(int)lonv;
+	   System.out.println("Excplict conversion");
+	    System.out.println("Byte Vlaue"+bytev);
+	    System.out.println("Short Value"+shortv);
+	    System.out.println("Integer Value"+intv);
+	    System.out.println("Implicit Conversions");
+	    System.out.println("Long Value"+lonv);
+	    System.out.println("Flaot Value"+floatv);
+	    System.out.println("double Value"+doublev);
+
+	}
+}
